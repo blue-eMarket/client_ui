@@ -83,6 +83,9 @@ label{
   .align-self-stretch {
     align-self: stretch !important;
   }
+  .trade-role span{
+    margin: 6px;
+  }
   
   .order-first {
     order: -1 !important;
