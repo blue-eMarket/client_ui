@@ -14,7 +14,11 @@
   <link rel="stylesheet" type="text/css" href="css/jquery-ui1.css">
   <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
 </head>
-
+<style>
+  .table td{
+    color: black;
+  }
+</style>
 <body>
   <div class="header-bot">
     <div class="header-bot_inner_wthreeinfo_header_mid">
@@ -115,7 +119,7 @@
     </div>
   </div>
 
-  <div class="ads-grid">
+  <div class="ads-grid " >
     <div class="container-fluid product-sec1" style="margin-top: -5%;">
           <h3 class="heading-tittle mt-1"><u>Products</u> </h3>
           <div class="">
@@ -129,7 +133,7 @@
                   <th>Product Images</th>
                 </tr>
               </thead>
-              <tbody id="table_body">
+              <tbody id="table_body" >
      
               </tbody>
 
@@ -208,7 +212,7 @@
                         <td>${values.productName}</td>
                         <td>${values.productDescription}</td>
                         <td>${values.price}</td>
-                        <td></td>
+                        <td><img src="https://ebluemarket.herokuapp.com/productImage/files/61.jpg" style="width:10%"></td>
                     
                     </tr>`;
       });
