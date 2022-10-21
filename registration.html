@@ -105,8 +105,9 @@
 									</ul>
 								</li>
 								<li class="">
-									<a class="nav-stylehead" href="https://blue-emarket-landing.netlify.app/" target="_blank">Our Blog
-									
+									<a class="nav-stylehead" href="https://blue-emarket-landing.netlify.app/"
+										target="_blank">Our Blog
+
 									</a>
 								</li>
 							</ul>
@@ -122,7 +123,7 @@
 			<div class="agileinfo-ads-display col-md-12">
 				<div class="wrapper">
 
-					<div class="">
+					<div class="" id="reg_card">
 						<div class="col-md-3 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
@@ -139,36 +140,47 @@
 								</div>
 								<div class="">
 									<div class="col-md-6 product-men">
-										<label>First name(s)</label>
-										<input type="text" class="form-control">
+										<label>Username</label>
+										<input type="text" class="form-control" name="username" id="uname" required>
 									</div>
-									<div class="col-md-6 product-men">
-										<label>Sur name</label>
-										<input type="text" class="form-control">
-									</div>
-								</div>
-								<div class="">
-									<div class="col-md-6 product-men">
-										<label>Phone</label>
-										<input type="text" class="form-control">
-									</div>
-									<div class="col-md-6 product-men">
-										<label>Email</label>
-										<input type="text" class="form-control">
-									</div>
-								</div>
-								<div class="">
 									<div class="col-md-6 product-men">
 										<label>Select Trade role(s)</label><br>
 										<div class="container p-4 trade-role">
-											<span><input type="radio">Seller</span>
-											<span><input type="radio">Buyer</span>
-											<span><input type="radio">Both</span>
+											<span><input type="radio" name="role" id="seller"
+													value="seller">Seller</span>
+											<span><input type="radio" name="role" id="buyer" value="buyer">Buyer</span>
+											<span><input type="radio" name="role" id="both" value="both">Both</span>
 										</div>
 
 									</div>
+								</div>
+							
+								<div class="">
 									<div class="col-md-6 product-men">
-										<button class="btn btn-primary">Save</button>
+										<label>Phone</label>
+										<input class="form-control" name="phone" id="phone" required>
+									</div>
+									<div class="col-md-6 product-men">
+										<label>Email</label>
+										<input type="email" class="form-control" id="email" name="email" required>
+									</div>
+								</div>
+								<div class="">
+
+									<div class="col-md-6 product-men">
+										<label>Password</label>
+										<input type="password" class="form-control" name="password1" id="password1">
+									</div>
+									<div class="col-md-6 product-men">
+										<label>Confirm Password</label>
+										<span id="psd_error"></span>
+										<input type="password" class="form-control" name="password2" id="password2">
+									</div>
+								</div>
+								<div class="mb-2">
+									<div class="col-md-6 "></div>
+									<div class="col-md-6 product-men">
+										<button id="save" class="btn btn-primary">Next</button>
 										<button class="btn btn-danger">Cancel</button>
 									</div>
 
@@ -227,7 +239,7 @@
 						<p> Please send me monthly newsletter and updates with free learning tips<input
 								style="margin:10px " type="checkbox"></p>
 						<form action="" method="post">
-							<input type="email" name="email"><input type="submit" value="Subscribe">
+							<input type="email" name="email"><input class="btn-success" type="submit" value="Subscribe">
 						</form>
 					</div>
 				</div>
@@ -236,153 +248,67 @@
 	</div>
 	<div class="copy-right ">
 		<div class="container">
-			<p>© 2022 Blue_eMarket. All rights reserved | Design by
-				<a href="#"> Blue Economy.</a>
+			<p>© 2022 Blue_eMarket | All rights reserved
 			</p>
 		</div>
 	</div>
 	</div>
-
-
 	<script src="js/jquery-2.1.4.min.js"></script>
-	<script src="js/jquery.magnific-popup.js"></script>
 	<script>
-		$(document).ready(function () {
-			$('.popup-with-zoom-anim').magnificPopup({
-				type: 'inline',
-				fixedContentPos: false,
-				fixedBgPos: true,
-				overflowY: 'auto',
-				closeBtnInside: true,
-				preloader: false,
-				midClick: true,
-				removalDelay: 300,
-				mainClass: 'my-mfp-zoom-in'
-			});
-
-		});
-	</script>
-	<script src="js/minicart.js"></script>
-	<script>
-		paypalm.minicartk.render(); //use only unique class names other than paypalm.minicartk.Also Replace same class name in css and minicart.min.js
-
-		paypalm.minicartk.cart.on('checkout', function (evt) {
-			var items = this.items(),
-				len = items.length,
-				total = 0,
-				i;
-
-			// Count the number of each item in the cart
-			for (i = 0; i < len; i++) {
-				total += items[i].get('quantity');
-			}
-
-			if (total < 3) {
-				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
-				evt.preventDefault();
-			}
-		});
-	</script>
-	<!-- //cart-js -->
-
-	<!-- price range (top products) -->
-	<script src="js/jquery-ui.js"></script>
-	<script>
-		//<![CDATA[ 
-		$(window).load(function () {
-			$("#slider-range").slider({
-				range: true,
-				min: 0,
-				max: 9000,
-				values: [50, 6000],
-				slide: function (event, ui) {
-					$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-				}
-			});
-			$("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
-
-		}); 
-	</script>
-
-	<script src="js/jquery.flexisel.js"></script>
-	<script>
-		$(window).load(function () {
-			$("#flexiselDemo1").flexisel({
-				visibleItems: 3,
-				animationSpeed: 1000,
-				autoPlay: true,
-				autoPlaySpeed: 3000,
-				pauseOnHover: true,
-				enableResponsiveBreakpoints: true,
-				responsiveBreakpoints: {
-					portrait: {
-						changePoint: 480,
-						visibleItems: 1
-					},
-					landscape: {
-						changePoint: 640,
-						visibleItems: 2
-					},
-					tablet: {
-						changePoint: 768,
-						visibleItems: 2
-					}
-				}
-			});
-
-		});
-	</script>
-
-	<script>
+		window.onload =  localStorage.clear();
+		document.getElementById("save").disabled = true;
 		window.onload = function () {
-			document.getElementById("password1").onchange = validatePassword;
-			document.getElementById("password2").onchange = validatePassword;
+
+			localStorage.setItem("username", document.getElementById("uname").value);
+			localStorage.setItem("phone", document.getElementById("phone").value);
+			localStorage.setItem("email", document.getElementById("email").value);
+
+			document.getElementById("password1").onkeyup = validatePassword;
+			document.getElementById("password2").onkeyup = validatePassword;
+
+
 		}
 
 		function validatePassword() {
 			var pass2 = document.getElementById("password2").value;
 			var pass1 = document.getElementById("password1").value;
-			if (pass1 != pass2)
-				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-			else
-				document.getElementById("password2").setCustomValidity('');
-			//empty string means no validation error
-		}
-	</script>
-	<script src="js/SmoothScroll.min.js"></script>
-	<script src="js/move-top.js"></script>
-	<script src="js/easing.js"></script>
-	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
+			if (pass1 != pass2) {
 
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 1000);
-			});
-		});
-	</script>
-	<script>
-		$(document).ready(function () {
-			/*
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-			};
-			*/
-			$().UItoTop({
-				easingType: 'easeOutQuart'
-			});
+				document.getElementById("psd_error").innerHTML = ("Passwords Don't Match");
+				document.getElementById("psd_error").style.color = "red";
+			}
+			else {
+				document.getElementById("psd_error").innerHTML = ("");
+				localStorage.setItem("password", document.getElementById("password2").value);
+				document.getElementById("save").disabled = false;
+				document.getElementById("save").onclick = function () {
+					var checked_role = document.querySelector('input[name = "role"]:checked');
+					if (checked_role != null) {
+						localStorage.setItem("role", checked_role.value);
+						if (checked_role.value == "seller") {
 
-		});
-		if ($(window).height() > $("body").height()) {
-			$("footer").css("position", "fixed");
-		} else {
-			$("footer").css("position", "static");
+							$.ajax({
+								type: 'POST',
+								url: "seller_registration.html",
+								data: "data=" + "",
+								cache: false,
+								success: function (data) {
+									$("#reg_card").html(data);
+
+								}
+							});
+						}
+					}
+				}
+
+
+			}
+
+
+
 		}
+
+
 
 	</script>
 
