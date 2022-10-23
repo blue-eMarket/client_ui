@@ -14,11 +14,7 @@
   <link rel="stylesheet" type="text/css" href="css/jquery-ui1.css">
   <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
 </head>
-<style>
-  .table td{
-    color: black;
-  }
-</style>
+
 <body>
   <div class="header-bot">
     <div class="header-bot_inner_wthreeinfo_header_mid">
@@ -119,11 +115,11 @@
     </div>
   </div>
 
-  <div class="ads-grid " >
-    <div class="container-fluid product-sec1" style="margin-top: -5%;">
-          <h3 class="heading-tittle mt-1"><u>Products</u> </h3>
-          <div class="">
-            <table id="example" class="table table-bordered  table-hover">
+  <div class="privacy " >
+    <div class="container-fluid " style="margin-top: -5%;">
+          <h3 class="heading-tittle mt-1">Products</h3>
+          <div class="table-responsive">
+            <table class=" timetable_sub table-hover">
               <thead>
                 <tr>
                   <th>sn</th>
@@ -182,8 +178,10 @@
             <p> Please send me monthly newsletter and updates with free learning tips<input style="margin:10px "
                 type="checkbox"></p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input class="btn-success" type="submit" value="Subscribe">
             </form>
+            <b>Download the App</b>
+            <img class="mt-4" src="images/1.png" >
           </div>
         </div>
       </div>
@@ -200,7 +198,7 @@
 
   <script>
     const apiUrl = 'https://ebluemarket.herokuapp.com';
-     fetch(`${apiUrl}/products/`).then((data)=>{
+     fetch(`${apiUrl}/products/get-product-images/`).then((data)=>{
         return data.json();
      }).then((objectData)=>{
       console.log(objectData);
@@ -208,11 +206,11 @@
       let i = 1;
       objectData.map((values)=>{
         tableData += `<tr>
-                        <td>${i++}</td>
-                        <td>${values.productName}</td>
-                        <td>${values.productDescription}</td>
-                        <td>${values.price}</td>
-                        <td><img src="https://ebluemarket.herokuapp.com/productImage/files/61.jpg" style="width:100px"></td>
+                        <td class="invert">${i++}</td>
+                        <td class="invert">${values.productName}</td>
+                        <td class="invert">${values.productDescription}</td>
+                        <td class="invert">${values.price}</td>  
+                        <td class="invert-image"><img src="https://ebluemarket.herokuapp.com/productImage/files/${values.productImageRespDto[0].productImage}" style="width:100px"></td>
                     
                     </tr>`;
       });

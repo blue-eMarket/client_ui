@@ -3741,7 +3741,7 @@ img.zoom-img:hover{
 /*-- //single-page --*/
 /*-- checkout --*/
 .checkout-right h4 {
-    color: #FF5722;
+    color: #277924;
     font-size: 27px;
     margin-bottom: 30px;
 }
@@ -3856,7 +3856,7 @@ td.invert-image a img {
     margin-top: 50px;
 }
 .address_form_agile h4 {
-    color: #1accfd;
+    color: #304d85;
     font-size: 24px;
     margin-bottom: 30px;
     letter-spacing: 1px;
@@ -3869,7 +3869,7 @@ td.invert-image a img {
     margin-bottom: 20px;
     outline: none;
     border: none;
-    border-bottom: 1px solid #FF5722;
+    border-bottom: 1px solid #1a5db6;
     -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.31);
     -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.31);
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.31);
@@ -3877,7 +3877,7 @@ td.invert-image a img {
 button.submit.check_out {
     padding: 12px 25px;
     letter-spacing: 1px;
-    background: #1accfd;
+    background: #0f3479;
     font-size: 16px;
     color: #fff;
     border: none;
