@@ -3,6 +3,7 @@ html, body{
 	margin:0;
 	background: #fff;
 	font-family: 'Open Sans', sans-serif;
+    width:100%;
 }
 body a {
 	text-decoration:none;
@@ -1609,7 +1610,7 @@ label{
     width: 73%;
 }
 .header-bot {
-    padding: 15px 0 5px;
+    padding: 10px 0 3px;
 }
 /*-- //logo --*/
 /*-- model_signin --*/
@@ -1778,13 +1779,18 @@ ul.multi-column-dropdown li a:hover{
 .top_nav_right {
     float: right;
     width: 28%;
+ 
 
 }
 .box_1 {
     text-align: center;
     margin-top: 8px;
-    padding: 1px;
+    padding: 0px;
 
+}
+.box_1 form{
+    display:inline-block;
+    margin-top: 2px;
 }
 a.simpleCart_empty {
     color: #fff;
@@ -1899,7 +1905,7 @@ button.w3view-cart {
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px transparent;
-    background: #1accfd;
+    background: #2953ad;
     border-radius: 4px;
     color: #fff;
     letter-spacing: 2px;
@@ -3877,7 +3883,7 @@ td.invert-image a img {
 button.submit.check_out {
     padding: 12px 25px;
     letter-spacing: 1px;
-    background: #0f3479;
+    background: #104099;
     font-size: 16px;
     color: #fff;
     border: none;
