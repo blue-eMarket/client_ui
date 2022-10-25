@@ -1738,16 +1738,17 @@ a.nav-stylehead {
 }
 .agile_short_dropdown {
     border-radius: 0;
-    background: #ffffff;
+    background: #c3d1d8;
     text-align: center;
 	padding:0;
 	border: none;
 }
 .agile_short_dropdown li a {
-    color: #063d41;
+    color: #061c35;
     font-size: 13px;
     padding: .8em 0;
     border-bottom: 1px solid #ececef;
+    font-weight: bold;
     letter-spacing: 1px;
 }
 .agile_short_dropdown > li > a:hover {
@@ -3286,7 +3287,7 @@ section#tables  p {
 }
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
 	font-size: 0.9em;
-	color: #999;
+	color: rgb(20, 20, 20);
 	border-top: none !important;
 }
 .tab-content > .active {
