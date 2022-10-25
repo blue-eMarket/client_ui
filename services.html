@@ -38,7 +38,7 @@
                         <button title="Your Cart" style="border-radius: 50%;" class=" btn btn-outline-primary"><span
                                 class="fa fa-2x fa-cart-plus"></span></button>
                         <span style="color:rgb(11, 145, 40); float:inline-end; margin-top: 4px;"
-                            class="fa fa-2x fa-globe"><small
+                            class="btn fa fa-2x fa-globe"><small
                                 style="font-size:small; color:darkgray">English</small></span>
                     </div>
                 </div>
@@ -118,17 +118,17 @@
     </div>
 
     <div class="ads-grid">
-        <div class="container-fluid product-sec1" style="margin-top: -5%;">
+        <div class="container-fluid " style="margin-top: -2%;">
             <div class="agileinfo-ads-display col-md-12">
 
-                <div class="wrapper">
+                <div class="wrapper" id="service_card">
                     <h3 class="heading-tittle"><u>Our Services</u> </h3>
 
                     <div class="container heading-tittle">
                         <div class="col-md-4 product-men btn btn-success">
                             <b class="">Renting</b>
                         </div>
-                        <div class="col-md-4 product-men card-header btn">
+                        <div class="col-md-4 product-men card-header btn" onclick="education()">
                             <b class=" p-2">Education</b>
                         </div>
                         <div class="col-md-4 product-men card-header btn">
@@ -138,7 +138,7 @@
                     </div>
                     <hr>
                     <div class="table-responsive container">
-                        <table class="table table-condensed ">
+                        <table class="table table-condensed " >
                             <tr>
                                 <td>
                                     <center><img src="images/boat1.jpg" style="width: 190px;"></center>
@@ -189,38 +189,38 @@
                         <td><button class="m-1 btn btn-outline-secondary">Contact Owner</button><br>
                             <button class="m-1 btn btn-outline-secondary">More Details</button>
                         </td>
-            </div>
-            </tr>
-            <tr>
-                <td>
-                    <center><img src="images/boat3.jpg" style="width: 190px;"></center>
-                </td>
-                <td>
-                    <h4>Shirazi Boat</h4>
-                </td>
-                <td>
-                    <div class="container-fluid">
+              
+                </tr>
+                <tr>
+                    <td>
+                        <center><img src="images/boat3.jpg" style="width: 190px;"></center>
+                    </td>
+                    <td>
+                        <h4>Shirazi Boat</h4>
+                    </td>
+                    <td>
+                        <div class="container-fluid">
 
-                        <ul>
-                            <li>Width : 1.7 meters</li>
-                            <li>Length 5.0 meters</li>
-                            <li>Capacity :
-                                <ul>
-                                    <li>10 - 15 people</li>
-                                    <li>100 g fishes</li>
-                                </ul>
-                            </li>
-                        </ul>
-                </td>
-                <td><button class="m-1 btn btn-outline-secondary">Contact Owner</button><br>
-                    <button class="m-1 btn btn-outline-secondary">More Details</button>
-                </td>
-    </div>
-    </tr>
-                    </table>
-                </div>
-            </div>
+                            <ul>
+                                <li>Width : 1.7 meters</li>
+                                <li>Length 5.0 meters</li>
+                                <li>Capacity :
+                                    <ul>
+                                        <li>10 - 15 people</li>
+                                        <li>100 g fishes</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                    </td>
+                    <td><button class="m-1 btn btn-outline-secondary">Contact Owner</button><br>
+                        <button class="m-1 btn btn-outline-secondary">More Details</button>
+                    </td>
+     
+            </tr>
+            </table>
         </div>
+    </div>
+    </div>
     </div>
     </div>
 
@@ -282,113 +282,9 @@
         </div>
     </div>
     </div>
-
-
     <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/jquery.magnific-popup.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.popup-with-zoom-anim').magnificPopup({
-                type: 'inline',
-                fixedContentPos: false,
-                fixedBgPos: true,
-                overflowY: 'auto',
-                closeBtnInside: true,
-                preloader: false,
-                midClick: true,
-                removalDelay: 300,
-                mainClass: 'my-mfp-zoom-in'
-            });
-
-        });
-    </script>
-    <script src="js/minicart.js"></script>
-    <script>
-        paypalm.minicartk.render(); //use only unique class names other than paypalm.minicartk.Also Replace same class name in css and minicart.min.js
-
-        paypalm.minicartk.cart.on('checkout', function (evt) {
-            var items = this.items(),
-                len = items.length,
-                total = 0,
-                i;
-
-            // Count the number of each item in the cart
-            for (i = 0; i < len; i++) {
-                total += items[i].get('quantity');
-            }
-
-            if (total < 3) {
-                alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
-                evt.preventDefault();
-            }
-        });
-    </script>
-    <!-- //cart-js -->
-
-    <!-- price range (top products) -->
     <script src="js/jquery-ui.js"></script>
-    <script>
-        //<![CDATA[ 
-        $(window).load(function () {
-            $("#slider-range").slider({
-                range: true,
-                min: 0,
-                max: 9000,
-                values: [50, 6000],
-                slide: function (event, ui) {
-                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-                }
-            });
-            $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
-
-        }); 
-    </script>
-
     <script src="js/jquery.flexisel.js"></script>
-    <script>
-        $(window).load(function () {
-            $("#flexiselDemo1").flexisel({
-                visibleItems: 3,
-                animationSpeed: 1000,
-                autoPlay: true,
-                autoPlaySpeed: 3000,
-                pauseOnHover: true,
-                enableResponsiveBreakpoints: true,
-                responsiveBreakpoints: {
-                    portrait: {
-                        changePoint: 480,
-                        visibleItems: 1
-                    },
-                    landscape: {
-                        changePoint: 640,
-                        visibleItems: 2
-                    },
-                    tablet: {
-                        changePoint: 768,
-                        visibleItems: 2
-                    }
-                }
-            });
-
-        });
-    </script>
-
-    <script>
-        window.onload = function () {
-            document.getElementById("password1").onchange = validatePassword;
-            document.getElementById("password2").onchange = validatePassword;
-        }
-
-        function validatePassword() {
-            var pass2 = document.getElementById("password2").value;
-            var pass1 = document.getElementById("password1").value;
-            if (pass1 != pass2)
-                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-            else
-                document.getElementById("password2").setCustomValidity('');
-            //empty string means no validation error
-        }
-    </script>
     <script src="js/SmoothScroll.min.js"></script>
     <script src="js/move-top.js"></script>
     <script src="js/easing.js"></script>
@@ -405,14 +301,6 @@
     </script>
     <script>
         $(document).ready(function () {
-            /*
-            var defaults = {
-                containerID: 'toTop', // fading element id
-                containerHoverID: 'toTopHover', // fading element hover id
-                scrollSpeed: 1200,
-                easingType: 'linear' 
-            };
-            */
             $().UItoTop({
                 easingType: 'easeOutQuart'
             });
@@ -424,6 +312,20 @@
             $("footer").css("position", "static");
         }
 
+    </script>
+    <script>
+        function education() {
+            $.ajax({
+                type: 'POST',
+                url: "education.html",
+                data: "data=" + "",
+                cache: false,
+                success: function (data) {
+                    $("#service_card").html(data);
+
+                }
+            });
+        }
     </script>
 
     <script src="js/bootstrap.js"></script>
