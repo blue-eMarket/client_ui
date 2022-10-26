@@ -131,7 +131,7 @@
                         <div class="col-md-4 product-men card-header btn" onclick="education()">
                             <b class=" p-2">Education</b>
                         </div>
-                        <div class="col-md-4 product-men card-header btn">
+                        <div class="col-md-4 product-men card-header btn" onclick="innovation()">
                             <b class=" p-2">Innovation</b>
                         </div>
                         <div class="clearfix"></div>
@@ -327,6 +327,20 @@
             });
         }
     </script>
+        <script>
+            function innovation() {
+                $.ajax({
+                    type: 'POST',
+                    url: "innovation_service.html",
+                    data: "data=" + "",
+                    cache: false,
+                    success: function (data) {
+                        $("#service_card").html(data);
+    
+                    }
+                });
+            }
+        </script>
 
     <script src="js/bootstrap.js"></script>
 </body>
