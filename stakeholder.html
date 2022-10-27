@@ -53,10 +53,12 @@
 
                         <div class="men-pro-item simpleCart_shelfItem">
                             <div class="">
-                                <h3 class="heading-tittle"><span style="color:rgb(57, 129, 177)"
-                                        class="btn fa fa-3x fa-user-circle-o"></span><br></h3>
+                                <h3 class="heading-tittle">
+                                    <span style="color:rgb(57, 129, 177)"
+                                        class="btn fa fa-3x fa-user-circle-o"></span><br>
+                                </h3>
                                 <center>
-                                    <h4>Moza Mohd Said</h4>
+                                    <h4>ZBS Admin</h4>
                                     <hr>
                                     <ul style="list-style:none; padding-bottom: 56%;">
                                         <li class="p-3"><span class="m-1 fa fa-home"></span><a href="welcome.html"
@@ -361,20 +363,20 @@
         }
 
     </script>
-        <script>
-            function addProduct() {
-                $.ajax({
-                    type: 'POST',
-                    url: "add_product.html",
-                    data: "data=" + "",
-                    cache: false,
-                    success: function (data) {
-                        $("#show").html(data);
-    
-                    }
-                });
-            }
-        </script>
+    <script>
+        function addProduct() {
+            $.ajax({
+                type: 'POST',
+                url: "add_product.html",
+                data: "data=" + "",
+                cache: false,
+                success: function (data) {
+                    $("#show").html(data);
+
+                }
+            });
+        }
+    </script>
 
     <script src="js/bootstrap.js"></script>
 </body>
